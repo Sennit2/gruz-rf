@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузоперевозки - СКТРАНС</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <script src="https://unpkg.com"></script>
+    <!-- Ваш основной скрипт (должен идти строго после IMask) -->
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-block">
+                <div class="logo-text">
+                    <span class="logo-title">ООО"СКТРАНС"</span>
+                    <span class="logo-subtitle">Перевозки по всей России</span>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <a href="#fleet" class="nav-link">АВТОПАРК</a>
+                <a href="#calculator" class="nav-link">ТАРИФЫ</a>
+            </nav>
+            
+            
+            <div class="header-contacts">
+                <a href="tel:88001234567" class="phone-link">8 800 123-45-67</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <main class="hero-section">
+        <div class="container hero-container">
+            
+            <!-- Левая колонка: Текст и кнопки -->
+            <div class="hero-content">
+                
+                
+                <h1 class="hero-title">
+                    ГРУЗОПЕРЕВОЗКИ <br>
+                    <span class="highlight">ОТ 100 КГ</span> <br>
+                    ДО 20 ТОНН
+                </h1>
+                
+                <p class="hero-description">
+                    Надёжные междугородние перевозки с гарантией сохранности груза. 
+                    Страховка до 5 млн рублей. Подача машины от 2 часов.
+                </p>
+                
+                
+            </div>
+
+            <!-- Правая колонка: Преимущества (Плитка) -->
+            <div class="hero-features">
+                <div class="feature-card">
+                    <div class="feature-icon orange-text">🛡️</div>
+                    <div class="feature-info">
+                        <span class="feature-value">до 5 000 000 ₽</span>
+                        <span class="feature-label">СТРАХОВАНИЕ ГРУЗА</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange-text">⏱️</div>
+                    <div class="feature-info">
+                        <span class="feature-value">за 2 часа</span>
+                        <span class="feature-label">ПОДАЧА МАШИНЫ</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange-text">👤</div>
+                    <div class="feature-info">
+                        <span class="feature-value">граждане РФ</span>
+                        <span class="feature-label">ВОДИТЕЛИ</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange-text">📦</div>
+                    <div class="feature-info">
+                        <span class="feature-value">14 800+</span>
+                        <span class="feature-label">ГРУЗОВ ПЕРЕВЕЗЕНО</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <span class="calc-subtitle">КАЛЬКУЛЯТОР СТОИМОСТИ</span>
+            <h2 class="calc-title">УЗНАЙТЕ ТОЧНУЮ ЦЕНУ</h2>
+            
+            <form class="calc-form">
+                <!-- Верхний ряд: Выбор транспорта -->
+                <div class="form-row transport-tabs">
+                    <label class="transport-tab">
+                        <input type="radio" name="transport" value="gazel">
+                        <div class="tab-content">
+                            <span class="tab-name">ГАЗЕЛЬ</span>
+                            <span class="tab-desc">ДО 1.5 Т</span>
+                        </div>
+                    </label>
+                    
+                    <label class="transport-tab">
+                        <input type="radio" name="transport" value="bychok">
+                        <div class="tab-content">
+                            <span class="tab-name">БЫЧОК</span>
+                            <span class="tab-desc">ДО 5 Т</span>
+                        </div>
+                    </label>
+                    
+                    <label class="transport-tab">
+                        <input type="radio" name="transport" value="fura" checked>
+                        <div class="tab-content">
+                            <span class="tab-name">ФУРА 20Т</span>
+                            <span class="tab-desc">ДО 20 Т</span>
+                        </div>
+                    </label>
+                </div>
+                
+                <!-- Нижний ряд: Ввод данных и отправка -->
+                <div class="form-row inputs-row">
+                    <div class="input-wrapper location-input">
+                        <span class="input-icon">📍</span>
+                        <input type="text" id="calc-from" name="from" placeholder="Откуда" required>
+                    </div>
+                    
+                    <div class="input-wrapper location-input">
+                        <span class="input-icon">📍</span>
+                        <input type="text" id="calc-to" name="to" placeholder="Куда" required>
+                    </div>
+                    
+                    <div class="input-wrapper phone-input">
+                        <span class="input-icon">📞</span>
+                        <input type="tel" id="calc-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">УЗНАТЬ СТОИМОСТЬ</button>
+                </div>
+                
+                <p class="form-disclaimer">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <section id="fleet" class="fleet-section">
+        <div class="container">
+            
+            <!-- Заголовок блока -->
+            <div class="fleet-header">
+                <div class="fleet-title-block">
+                    <span class="fleet-subtitle">СОБСТВЕННЫЙ ПАРК</span>
+                    <h2 class="fleet-title">НАШИ АВТОМОБИЛИ</h2>
+                </div>
+                <a href="#" class="btn-all-fleet">ВЕСЬ АВТОПАРК &rarr;</a>
+            </div>
+            
+            <!-- Сетка карточек -->
+            <div class="fleet-grid">
+                
+                <!-- Карточка 1: Газель -->
+                <div class="fleet-card">
+                    <div class="fleet-image-placeholder">
+                        <!-- Вставьте ваше фото сюда: <img src="gazel.jpg" alt="Газель"> -->
+                        <span class="placeholder-text">Фото Газели</span>
+                    </div>
+                    <div class="fleet-info">
+                        <h3 class="vehicle-name">ГАЗЕЛЬ</h3>
+                        <div class="specs-list">
+                            <div class="spec-item"><span class="spec-label">ГРУЗОПОДЪЁМ.</span><span class="spec-value">1.5 т</span></div>
+                            <div class="spec-item"><span class="spec-label">ОБЪЁМ КУЗОВА</span><span class="spec-value">18 м³</span></div>
+                            <div class="spec-item"><span class="spec-label">ТИП КУЗОВА</span><span class="spec-value">Тент / Изотерм</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Бычок -->
+                <div class="fleet-card">
+                    <div class="fleet-image-placeholder">
+                        <!-- Вставьте ваше фото сюда: <img src="bychok.jpg" alt="Бычок"> -->
+                        <span class="placeholder-text">Фото Бычка</span>
+                    </div>
+                    <div class="fleet-info">
+                        <h3 class="vehicle-name">БЫЧОК<br>(БОРТОВОЙ)</h3>
+                        <div class="specs-list">
+                            <div class="spec-item"><span class="spec-label">ГРУЗОПОДЪЁМ.</span><span class="spec-value">5 т</span></div>
+                            <div class="spec-item"><span class="spec-label">ОБЪЁМ КУЗОВА</span><span class="spec-value">25 м³</span></div>
+                            <div class="spec-item"><span class="spec-label">ТИП КУЗОВА</span><span class="spec-value">Борт / Тент</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Еврофура -->
+                <div class="fleet-card">
+                    <div class="fleet-image-placeholder">
+                        <!-- Вставьте ваше фото сюда: <img src="fura.jpg" alt="Еврофура"> -->
+                        <span class="placeholder-text">Фото Еврофуры</span>
+                    </div>
+                    <div class="fleet-info">
+                        <h3 class="vehicle-name">ЕВРОФУРА 20Т</h3>
+                        <div class="specs-list">
+                            <div class="spec-item"><span class="spec-label">ГРУЗОПОДЪЁМ.</span><span class="spec-value">20 т</span></div>
+                            <div class="spec-item"><span class="spec-label">ОБЪЁМ КУЗОВА</span><span class="spec-value">82 м³</span></div>
+                            <div class="spec-item"><span class="spec-label">ТИП КУЗОВА</span><span class="spec-value">Тент / Рефрижератор</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: Рефрижератор -->
+                <div class="fleet-card">
+                    <div class="fleet-image-placeholder">
+                        <!-- Вставьте ваше фото сюда: <img src="ref.jpg" alt="Рефрижератор"> -->
+                        <span class="placeholder-text">Фото Рефрижератора</span>
+                    </div>
+                    <div class="fleet-info">
+                        <h3 class="vehicle-name">РЕФРИЖЕРАТОР</h3>
+                        <div class="specs-list">
+                            <div class="spec-item"><span class="spec-label">ГРУЗОПОДЪЁМ.</span><span class="spec-value">18 т</span></div>
+                            <div class="spec-item"><span class="spec-label">ОБЪЁМ КУЗОВА</span><span class="spec-value">76 м³</span></div>
+                            <div class="spec-item"><span class="spec-label">ТИП КУЗОВА</span><span class="spec-value">Рефрижератор</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process-section">
+        <div class="container">
+            <span class="process-subtitle">ПРОЗРАЧНЫЙ ПРОЦЕСС</span>
+            <h2 class="process-title">КАК МЫ РАБОТАЕМ</h2>
+            
+            <div class="process-grid">
+                <!-- Шаг 1 -->
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">ЗАЯВКА И РАСЧЁТ</h3>
+                    <p class="step-text">Оставьте заявку онлайн или по телефону. Менеджер рассчитает стоимость в течение 10 минут.</p>
+                </div>
+                
+                <!-- Шаг 2 -->
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                    <p class="step-text">Подписываем договор с НДС или без НДС — как вам удобно. Работаем с ИП, ООО и физлицами.</p>
+                </div>
+                
+                <!-- Шаг 3 -->
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">ПОДАЧА МАШИНЫ И ПОГРУЗКА</h3>
+                    <p class="step-text">Машина подаётся точно в согласованное время. Грузчики и экспедитор включены в тариф.</p>
+                </div>
+                
+                <!-- Шаг 4 -->
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">ДОСТАВКА И ДОКУМЕНТЫ</h3>
+                    <p class="step-text">Груз доставляется в срок. Передаём все закрывающие документы: ТТН, CMR, акты.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Горизонтальная плашка преимуществ -->
+    <section class="advantages-bar">
+        <div class="container advantages-container">
+            <div class="adv-item">
+                <span class="adv-icon">🛡️</span>
+                <div class="adv-info">
+                    <span class="adv-title">до 5 000 000 ₽</span>
+                    <span class="adv-desc">Страхование груза</span>
+                </div>
+            </div>
+            
+            <div class="adv-item">
+                <span class="adv-icon">⏱️</span>
+                <div class="adv-info">
+                    <span class="adv-title">от 2 часов</span>
+                    <span class="adv-desc">Подача машины</span>
+                </div>
+            </div>
+            
+            <div class="adv-item">
+                <span class="adv-icon">👤</span>
+                <div class="adv-info">
+                    <span class="adv-title">Российской Федерации</span>
+                    <span class="adv-desc">Водители — граждане</span>
+                </div>
+            </div>
+            
+            <div class="adv-item">
+                <span class="adv-icon">📄</span>
+                <div class="adv-info">
+                    <span class="adv-title">с НДС и без НДС</span>
+                    <span class="adv-desc">Работаем официально</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (ФУТЕР) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <!-- О компании -->
+            <div class="footer-col info-col">
+                <div class="logo-block">
+                    <div class="logo-icon"><span>Гб</span></div>
+                    <span class="logo-title">ГРУЗРФ</span>
+                </div>
+                <p class="footer-company-desc">ООО «ГрузРФ» — надёжные грузоперевозки по всей России с 2012 года.</p>
+                <div class="company-requisites">
+                    <span>ИНН 7701234567</span>
+                    <span>ОГРН 1127701234567</span>
+                </div>
+            </div>
+            
+            <!-- Навигация -->
+            <div class="footer-col links-col">
+                <h4 class="footer-col-title">НАВИГАЦИЯ</h4>
+                <ul class="footer-menu">
+                    <li><a href="#fleet">Автопарк</a></li>
+                    <li><a href="#calculator">Цены и тарифы</a></li>
+                    <li><a href="#process">Как мы работаем</a></li>
+                </ul>
+            </div>
+            
+            <!-- Контакты -->
+            <div class="footer-col contacts-col">
+                <h4 class="footer-col-title">КОНТАКТЫ</h4>
+                <ul class="footer-contacts-list">
+                    <li><a href="tel:88001234567" class="footer-phone">📞 8 800 123-45-67 (бесплатно)</a></li>
+                    <li><a href="#">💬 WhatsApp</a></li>
+                    <li><a href="#">✈️ Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Копирайт -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <span class="copyright">© 2026 ООО «ГрузРФ». Все права защищены.</span>
+                <span class="license">Лицензия на перевозку грузов № АА 123456</span>
+            </div>
+        </div>
+    </footer>
+ <div id="success-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+            <div class="modal-success-icon">✓</div>
+            <h3 class="modal-title">ЗАЯВКА ПРИНЯТА!</h3>
+            <p class="modal-text">Спасибо за обращение. Наш логист уже рассчитывает стоимость рейса и свяжется с вами в течение 10 минут.</p>
+            <button class="btn btn-primary modal-action-btn" id="ok-modal-btn">ОТЛИЧНО</button>
+        </div>
+    </div>
+</body>
+
+
+</html>
