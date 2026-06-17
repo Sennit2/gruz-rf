@@ -10,33 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. ЛОГИКА МОДАЛЬНОГО ОКНА
-    const successModal = document.getElementById('success-modal');
-    const closeBtn = document.getElementById('close-modal-btn');
-    const okBtn = document.getElementById('ok-modal-btn');
 
-    function openModal() {
-        successModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; /* Блокируем прокрутку сайта под окном */
-    }
-
-    function closeModal() {
-        successModal.classList.remove('active');
-        document.body.style.overflow = ''; /* Возвращаем прокрутку */
-    }
-
-    // Закрытие по клику на элементы управления
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (okBtn) okBtn.addEventListener('click', closeModal);
-
-    // Закрытие по клику на темную область вокруг карточки
-    if (successModal) {
-        successModal.addEventListener('click', (e) => {
-            if (e.target === successModal) {
-                closeModal();
-            }
-        });
-    }
 
 
     // 3. НАСТРОЙКИ TELEGRAM И ОТПРАВКА ФОРМЫ
