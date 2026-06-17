@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `📞 *Телефон:* ${userPhone}`;
 
             // URL для отправки запроса к API Telegram
-           const url = 'https://telegram.org' + TELEGRAM_TOKEN + '/sendMessage';
+           const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
             try {
                 const response = await fetch(url, {
