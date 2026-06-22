@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // НАСТРОЙКИ TELEGRAM (Замените на свои данные)
-    const TELEGRAM_TOKEN = '8711337483:AAGBfeIq2P6xuzhYpS3jPmrDj-37jPGOf08';
-    const CHAT_ID = '1130972729';
+    const TELEGRAM_TOKEN = '';
+    const CHAT_ID = '';
 
     const calcForm = document.querySelector('.calc-form');
 
